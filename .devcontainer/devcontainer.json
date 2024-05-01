@@ -47,7 +47,7 @@
 		}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [5901,6080],
+    "forwardPorts": [5901, 6080],
     "portsAttributes": {
       "5901": {
         "label": "vnc"
@@ -55,8 +55,7 @@
       "6080": {
         "label": "desktop"
       }
-    }
-
+    },
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
 
