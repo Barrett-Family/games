@@ -6,12 +6,15 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive
 
 RUN python3 -m pip install --upgrade \
     setuptools==69.0.3 \
-    gitpython==3.1.41
+    gitpython==3.1.41 \
+    pygame==2.5.2 \
+    pyxel==2.0.10 \
+    arcade==2.6.17
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
-COPY ./requirements.txt /tmp/pip-tmp/
-RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-   && rm -rf /tmp/pip-tmp
+# COPY ./requirements.txt /tmp/pip-tmp/
+# RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
+#    && rm -rf /tmp/pip-tmp
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
