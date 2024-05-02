@@ -56,6 +56,16 @@
         "label": "desktop"
       }
     },
+    "containerEnv": {
+        "PATH": "/usr/local/lib/python3.12/site-packages:/usr/local/python/current/bin/python:${localEnv:PYTHON_PATH}:${localEnv:PATH}",
+        "PYTHONPATH": "/usr/local/lib/python3.12/site-packages:/usr/local/python/current/bin/python:${localEnv:PYTHON_PATH}",
+        "PYTHON_PATH": "/usr/local/lib/python3.12/site-packages:/usr/local/python/current/bin/python:${localEnv:PYTHON_PATH}",
+    },
+    "remoteEnv": {
+        "PATH": "/usr/local/lib/python3.12/site-packages:/usr/local/python/current/bin/python:${containerEnv:PATH}",
+        "PYTHONPATH": "/usr/local/lib/python3.12/site-packages:/usr/local/python/current/bin/python:${containerEnv:PYTHON_PATH}:${containerEnv:PYTHONPATH}",
+        "PYTHON_PATH": "/usr/local/lib/python3.12/site-packages:/usr/local/python/current/bin/python:${containerEnv:PYTHON_PATH}:${containerEnv:PYTHONPATH}",
+    }
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
 
