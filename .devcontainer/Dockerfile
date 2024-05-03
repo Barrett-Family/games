@@ -13,7 +13,7 @@ RUN python3 -m pip install --upgrade \
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends libjpeg-dev zlib1g-dev libsdl2-dev firefox-esr alsaplayer-common alsa-utils
+    && apt-get -y install --no-install-recommends libjpeg-dev zlib1g-dev libsdl2-dev firefox-esr alsaplayer-common alsa-utils libasound2-dev libglib2.0-dev
 
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
